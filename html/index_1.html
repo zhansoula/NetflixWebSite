@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Home - Netflix</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css"
+    integrity="sha384-zIaWifL2YFF1qaDiAo0JFgsmasocJ/rqu7LKYH8CoBEXqGbb9eO+Xi3s6fQhgFWM" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/style.css">
+  </head>
+  <body>
+
+    <header class="header_index_1">
+        <a href="index.html" class="logo"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/7/7a/Logonetflix.png/800px-Logonetflix.png?20170904093427" style="width: 134px"></a>
+        <ul class="navigation_home">
+            <li> <a href="#">Home</a> </li>
+            <li> <a href="index_3.html">For children</a> </li>
+            <li> <a href="index_2.html">My list</a></li>
+            <li> <a href="#">Movies</a> </li>
+            <li> <a href="#">TV Shows</a> </li>
+
+      </ul>
+            <div class="search">
+                <input type="text" placeholder="Search">
+            </div>
+    </header>
+    <div class="banner">
+        <img src="../images/background_home.jpg" alt="background_home" class="background_home">
+            <div class="content">
+                <img src="../images/font_home.png" class="movie_title">
+                <h4>
+                    <span>2016</span>
+                    <span> <i>12+</i></span>
+                    <span>4 episodes</span>
+                    <span>Horror, Fantazy</span>
+
+                </h4>
+                <p>Hawkins, Indiana, 1983. A young boy, Will Byers, goes missing near a top-secret government laboratory.
+                    That same night, a strange young girl appears at a diner in the town.
+                    She has telekinetic powers and is on the run from the laboratory.</p>
+                        <div class="buttons_home">
+                            <a onclick="toggleVideo()">Watch Trailer</a>
+                            <a href="index_2.html"><i class="fa fa-plus" aria-hidden="true"></i>My list</a>
+                        </div>
+                </div>
+            </div>
+            <div class="trailer">
+                <video src="../images/trailer.mp4" controls="true" autoplay="true"></video>
+                <img src="../images/close.png" class="close" onclick="toggleVideo()">
+            </div>
+    <script>
+        function toggleVideo(){
+        const trailer = document.querySelector('.trailer');
+        const video = document.querySelector('video');
+        trailer.classList.toggle('active')
+        video.currentTime = 0;
+        video.pause();
+        }
+        </script>
+  </body>
+</html>
